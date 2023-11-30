@@ -14,5 +14,5 @@ function mostrar__sobre(){
 function mostrar__receitas(){
     document.getElementById('top__container').style.display = 'none'
     document.getElementById('about__container').style.display = 'none'
-    document.getElementById('product__container').style.display = 'flex'
+    document.getElementById('product__container').style.display = 'grid'
 }
