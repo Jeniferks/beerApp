@@ -146,7 +146,7 @@ p {
     /* width: 100%;
     height: 100vh; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     
 }
 
@@ -206,19 +206,18 @@ button :hover{
 
 /* flip card */
 
-.flip-container {
+.flip-container, .flip-container-2 {
     width: 200px;
     height: 100px;
     perspective: 1000px;
+    margin: 50px;
+
     
 }
 
-/* .flip-container:hover .flipper{
-	transform: rotateY(180deg);
-	
-} */
 
-.flipper{
+
+.flipper, .flipper-2{
 	width: 100%;
 	height: 100%;
     position: relative;
@@ -226,7 +225,7 @@ button :hover{
 	transform-style: preserve-3d;
 }
 
-.front, .back{
+.front, .back,.front-2, .back-2 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -236,7 +235,7 @@ button :hover{
 
 
 
-.back{
+.back, .back-2{
 	transform: rotateY(180deg);
 }
 
@@ -251,5 +250,38 @@ button :hover{
 }
 
 #switch{
+	display: none;
+}
+
+
+
+
+
+
+
+
+#switch-2:checked ~ .flip-container-2 .flipper-2 {
+    transform: rotateY(180deg);
+
+
+}
+
+#switch-2{
+	display: none;
+}
+
+
+
+
+
+
+
+#switch-2:checked ~ .flip-container-2 .flipper-2 {
+    transform: rotateY(180deg);
+
+
+}
+
+#switch-2{
 	display: none;
 }
